@@ -8,6 +8,7 @@ import GalleryItem from '../components/GalleryItem.astro';
   <Sidebar slot="sidebar" />
 
   <link rel="stylesheet" href="/styles/gallery.css" />
+  <script src="/scripts/highlight.js" defer></script>
 
   <h1>🖌️ Illustration Gallery</h1>
 
@@ -18,24 +19,36 @@ import GalleryItem from '../components/GalleryItem.astro';
     <button data-filter="Sketch">Sketch</button>
   </div>
 
+<section class="gallery-banner">
+  <a href="#dreamlike" class="frame" data-tags="Mixed ConceptArt" title="Dreamlike Forest">
+    <img src="/images/example1.jpg" alt="Dreamlike Forest" />
+  </a>
+  <a href="#moth" class="frame offset" data-tags="Digital Sketch" title="Moth Guardian">
+    <img src="/images/example2.jpg" alt="Moth Guardian" />
+  </a>
+</section>
+
   <div class="gallery">
-    <GalleryItem
+<GalleryItem
   imgSrc="/images/example1.jpg"
   alt="Dreamlike Forest"
   title="Dreamlike Forest"
   description="Mixed Media, 2023"
   tags={["Mixed", "ConceptArt"]}
   projectLink="/projects/dreamlike-forest"
-    />
+  id="dreamlike"
+/>
 
-    <GalleryItem
-      imgSrc="/images/example2.jpg"
-      alt="Moth Guardian"
-      title="Moth Guardian"
-      description="Digital Illustration, 2024"
-      tags={["Digital", "Sketch"]}
-      projectLink="/projects/moth-guardian"
-    />
+<GalleryItem
+  imgSrc="/images/example2.jpg"
+  alt="Moth Guardian"
+  title="Moth Guardian"
+  description="Digital Illustration, 2024"
+  tags={["Digital", "Sketch"]}
+  projectLink="/projects/moth-guardian"
+  id="moth"
+/>
+
   </div>
 
   <script src="/scripts/filter.js" defer></script>

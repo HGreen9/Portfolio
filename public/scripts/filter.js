@@ -1,17 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("[data-filter]");
-  const items = document.querySelectorAll(".art-piece");
+  const cards = document.querySelectorAll(".art-piece");
+  const frames = document.querySelectorAll(".gallery-banner .frame");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const filter = button.getAttribute("data-filter");
 
-      items.forEach((item) => {
-        const itemTags = item.getAttribute("data-tags").split(" ");
-        if (filter === "all" || itemTags.includes(filter)) {
-          item.style.display = "block";
+      cards.forEach((card) => {
+        const tags = card.getAttribute("data-tags").split(" ");
+        card.style.display = (filter === "all" || tags.includes(filter)) ? "block" : "none";
+      });
+
+      frames.forEach((frame) => {
+        const tags = frame.getAttribute("data-tags").split(" ");
+        if (filter === "all" || tags.includes(filter)) {
+          frame.classList.remove("faded");
         } else {
-          item.style.display = "none";
+          frame.classList.add("faded");
         }
       });
     });

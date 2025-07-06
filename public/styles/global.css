@@ -81,4 +81,6 @@ body {
   transform: scaleX(1);
 }
 
-
+html {
+  scroll-behavior: smooth;
+}

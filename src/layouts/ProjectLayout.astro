@@ -1,0 +1,46 @@
+---
+const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/project.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <slot name="sidebar" />
+      </aside>
+
+<main class="content">
+  <nav class="breadcrumb">
+    <slot name="breadcrumb" />
+  </nav>
+
+  <article class="project">
+    <h1>{icon} {title}</h1>
+
+          {image && (
+            <img src={image} alt={title + " artwork"} class="project-hero" />
+          )}
+
+          <section class="project-info">
+            <p><strong>Medium:</strong> {medium}</p>
+            <p><strong>Year:</strong> {year}</p>
+            {tags.length > 0 && (
+              <p><strong>Tags:</strong> {tags.join(", ")}</p>
+            )}
+          </section>
+
+          <slot /> <!-- Content goes here -->
+
+          <a href={backLink} class="back-link">← Back to Gallery</a>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,8 +1,8 @@
 ---
-const { imgSrc, alt, title, description, tags = [], projectLink = "" } = Astro.props;
+const { imgSrc, alt, title, description, tags = [], projectLink = "", id = "" } = Astro.props;
 ---
 
-<div class="art-piece" data-tags={tags.join(" ")}>
+<div class="art-piece" id={id} data-tags={tags.join(" ")}>
   <img src={imgSrc} alt={alt} />
   <p><strong>{title}</strong> – {description}</p>
 
