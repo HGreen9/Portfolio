@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+---
+
+<ProjectLayout
+  title="Moth Guardian"
+  icon="🦋"
+  year="2024"
+  medium="Digital Illustration"
+  tags={["Digital", "Sketch"]}
+  image="/images/example2.jpg"
+  backLink="/illustration"
+>
+
+  <Fragment slot="breadcrumb">
+    <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>Moth Guardian</span>
+  </Fragment>
+
+  <Sidebar slot="sidebar" />
+
+  <section class="project-description">
+    <h2>About the Project</h2>
+    <p>
+   blank
+    </p>
+  </section>
+
+  <section class="project-tools">
+    <h2>Tools Used</h2>
+    <ul>
+      <li>blank</li>
+    </ul>
+  </section>
+</ProjectLayout>

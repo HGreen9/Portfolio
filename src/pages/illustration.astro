@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Sidebar from '../components/Sidebar.astro';
-import GalleryItem from '../components/GalleryItem.astro';
+import Gallerybanner from '../components/illustration/Gallerybanner.astro';
+import Gallerycards from '../components/illustration/Gallerycards.astro';
+import Backtotop from '../components/Backtotop.astro';
 ---
 
 <BaseLayout title="Illustration Work">
@@ -20,36 +22,14 @@ import GalleryItem from '../components/GalleryItem.astro';
   </div>
 
 <section class="gallery-banner">
-  <a href="#dreamlike" class="frame" data-tags="Mixed ConceptArt" title="Dreamlike Forest">
-    <img src="/images/example1.jpg" alt="Dreamlike Forest" />
-  </a>
-  <a href="#moth" class="frame offset" data-tags="Digital Sketch" title="Moth Guardian">
-    <img src="/images/example2.jpg" alt="Moth Guardian" />
-  </a>
+  <Gallerybanner />
 </section>
 
   <div class="gallery">
-<GalleryItem
-  imgSrc="/images/example1.jpg"
-  alt="Dreamlike Forest"
-  title="Dreamlike Forest"
-  description="Mixed Media, 2023"
-  tags={["Mixed", "ConceptArt"]}
-  projectLink="/projects/dreamlike-forest"
-  id="dreamlike"
-/>
-
-<GalleryItem
-  imgSrc="/images/example2.jpg"
-  alt="Moth Guardian"
-  title="Moth Guardian"
-  description="Digital Illustration, 2024"
-  tags={["Digital", "Sketch"]}
-  projectLink="/projects/moth-guardian"
-  id="moth"
-/>
-
+    <Gallerycards />
   </div>
+  
+  <Backtotop />
 
   <script src="/scripts/filter.js" defer></script>
 </BaseLayout>

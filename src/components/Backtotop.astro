@@ -1,0 +1,53 @@
+  <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+<style>
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #e6dcc8;
+  color: #333;
+  border: 2px solid #bfa888;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  background-color: #fff8f0;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
+
+<script>    
+window.addEventListener("scroll", () => {
+  const button = document.getElementById("backToTop");
+  if (!button) return;
+  if (window.scrollY > 300) {
+    button.classList.add("show");
+  } else {
+    button.classList.remove("show");
+  }
+});
+
+const backToTopBtn = document.getElementById("backToTop");
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+</script>
