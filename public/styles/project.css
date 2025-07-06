@@ -1,0 +1,67 @@
+.project {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project-description p {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3e342b;
+}
+
+.project-hero {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #5a4a3b;
+}
+
+.project-description,
+.project-tools {
+  margin-top: 2rem;
+}
+
+.project-description h2,
+.project-tools h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #5a4a3b;
+}
+
+.project-tools ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #5a4a3b;
+  text-decoration: none;
+  background-color: #eae2d6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.back-link:hover {
+  background-color: #d6c8b2;
+}

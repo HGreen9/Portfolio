@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import GalleryItem from '../components/GalleryItem.astro';
+---
+
+<BaseLayout title="Illustration Work">
+  <Sidebar slot="sidebar" />
+
+  <link rel="stylesheet" href="/styles/gallery.css" />
+
+  <h1>🖌️ Illustration Gallery</h1>
+
+  <div class="filters">
+    <button data-filter="all">Show All</button>
+    <button data-filter="Digital">Digital</button>
+    <button data-filter="Mixed">Mixed</button>
+    <button data-filter="Sketch">Sketch</button>
+  </div>
+
+  <div class="gallery">
+    <GalleryItem
+  imgSrc="/images/example1.jpg"
+  alt="Dreamlike Forest"
+  title="Dreamlike Forest"
+  description="Mixed Media, 2023"
+  tags={["Mixed", "ConceptArt"]}
+  projectLink="/projects/dreamlike-forest"
+    />
+
+    <GalleryItem
+      imgSrc="/images/example2.jpg"
+      alt="Moth Guardian"
+      title="Moth Guardian"
+      description="Digital Illustration, 2024"
+      tags={["Digital", "Sketch"]}
+      projectLink="/projects/moth-guardian"
+    />
+  </div>
+
+  <script src="/scripts/filter.js" defer></script>
+</BaseLayout>

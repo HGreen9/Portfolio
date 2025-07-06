@@ -1,0 +1,86 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.art-piece {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #fdfaf6;
+  border: 1px solid #ccc5b9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.art-piece:hover {
+  transform: translateY(-5px);
+}
+
+.art-piece img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.filters {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  background-color: #dcd5c2;
+  border: none;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.filters button:hover {
+  background-color: #bfae96;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #c8bba5;
+  color: #2e2e2e;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border-radius: 6px;
+}
+
+.project-link {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.project-link a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #7b6e55;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  background-color: #eae2d6;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-link a:hover {
+  background-color: #d6c8b2;
+  transform: translateX(4px);
+}

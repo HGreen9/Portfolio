@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+---
+
+<BaseLayout title="Dreamlike Forest – Project">
+  <Sidebar slot="sidebar" />
+
+  <link rel="stylesheet" href="/styles/project.css" />
+
+  <article class="project">
+    <h1>🌲 Dreamlike Forest</h1>
+
+    <img src="/images/example1.jpg" alt="Dreamlike Forest artwork" class="project-hero" />
+
+    <section class="project-info">
+      <p><strong>Medium:</strong> Mixed Media</p>
+      <p><strong>Year:</strong> 2023</p>
+      <p><strong>Tags:</strong> Mixed, ConceptArt</p>
+    </section>
+
+    <section class="project-description">
+      <h2>About the Project</h2>
+      <p>
+        This piece explores the concept of lost memories in overgrown environments. I was inspired by the quiet stillness
+        of forgotten spaces and wanted to blend organic and magical elements.
+      </p>
+      <p>
+        I started with pencil and ink, then layered textures digitally to create a dreamlike glow. I chose cool earthy
+        tones to evoke softness and melancholy.
+      </p>
+    </section>
+
+    <section class="project-tools">
+      <h2>Tools Used</h2>
+      <ul>
+        <li>Procreate</li>
+        <li>Micron Pens</li>
+        <li>Gouache Textures</li>
+      </ul>
+    </section>
+
+    <a href="/illustration" class="back-link">← Back to Illustration Gallery</a>
+  </article>
+</BaseLayout>
