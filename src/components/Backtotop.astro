@@ -2,19 +2,24 @@
 <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
 <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
-  background-color: #e6dcc8;
-  color: #333;
+  right: 1rem; /* slightly closer to edge, giving content more space */
+  background-color: #e6dcc8; /* keeps your palette */
+  color: #3a2f20; /* a bit warmer/darker for better contrast */
   border: 2px solid #bfa888;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem; /* slightly smaller button */
+  border-radius: 0.6rem;
+  font-size: 1rem; /* reduced size for a more subtle presence */
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -22,14 +27,15 @@
 }
 
 .back-to-top:hover {
-  transform: scale(1.1);
-  background-color: #fff8f0;
+  transform: scale(1.08);
+  background-color: #f3ebdc; /* softer contrast than stark white */
 }
 
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
+
 </style>
 
 <script>    
