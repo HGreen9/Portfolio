@@ -42,5 +42,20 @@ const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" 
         </article>
       </main>
     </div>
+
+  <script>
+  const observers = document.querySelectorAll('.animate-slide');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  observers.forEach(el => observer.observe(el));
+</script>
+
   </body>
 </html>

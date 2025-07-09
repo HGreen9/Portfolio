@@ -1,6 +1,7 @@
 ---
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import Sidebar from '../../components/Sidebar.astro';
+import Sparkle from '../../components/Sparkle.astro';
 ---
 
 <ProjectLayout
@@ -9,9 +10,10 @@ import Sidebar from '../../components/Sidebar.astro';
   year="2023"
   medium="Mixed Media"
   tags={["Mixed", "ConceptArt"]}
-  image="/images/example1.jpg"
+  image="/images/star girl.png"
   backLink="/illustration"
 >
+<Sparkle />
 
   <Fragment slot="breadcrumb">
     <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>Dreamlike Forest</span>
@@ -20,7 +22,9 @@ import Sidebar from '../../components/Sidebar.astro';
   <Sidebar slot="sidebar" />
 
   <section class="project-description">
-    <h2>About the Project</h2>
+        <section class="project-description animate-slide">
+        <h2>About the Project</h2>
+
     <p>
       This piece explores the concept of lost memories in overgrown environments. I was inspired by the quiet stillness
       of forgotten spaces and wanted to blend organic and magical elements.
@@ -29,6 +33,7 @@ import Sidebar from '../../components/Sidebar.astro';
       I started with pencil and ink, then layered textures digitally to create a dreamlike glow. I chose cool earthy tones
       to evoke softness and melancholy.
     </p>
+        </section>
   </section>
 
   <section class="project-tools">
@@ -39,4 +44,5 @@ import Sidebar from '../../components/Sidebar.astro';
       <li>Gouache Textures</li>
     </ul>
   </section>
+
 </ProjectLayout>

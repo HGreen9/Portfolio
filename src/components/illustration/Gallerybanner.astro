@@ -1,6 +1,8 @@
-  <a href="#dreamlike" class="frame" data-tags="Mixed ConceptArt" title="Dreamlike Forest">
-    <img src="/images/example1.jpg" alt="Dreamlike Forest" />
-  </a>
+<a href="#dreamlike" class="frame preview-banner" data-tags="Mixed ConceptArt" title="Dreamlike Forest">
+  <img src="/images/star girl.png" alt="Dreamlike Forest" />
+  <div class="preview-overlay">View →</div>
+</a>
+
   <a href="#moth" class="frame offset" data-tags="Digital Sketch" title="Moth Guardian">
     <img src="/images/example2.jpg" alt="Moth Guardian" />
   </a>
@@ -13,3 +15,47 @@
   <a href="#piece7" class="frame" data-tags="Mixed" title="Lantern Spirits">
     <img src="/images/example7.jpg" alt="Lantern Spirits" />
   </a>
+
+  <style>
+  .preview-banner {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 4px solid #d8c7ab;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  max-width: 120px;
+  aspect-ratio: 1 / 1;
+}
+
+.preview-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.preview-banner:hover img {
+  transform: scale(1.05);
+  filter: blur(2px) brightness(0.9);
+}
+
+.preview-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff8f0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.preview-banner:hover .preview-overlay {
+  opacity: 1;
+}
+
+  </style>
