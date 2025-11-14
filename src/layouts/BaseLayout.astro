@@ -12,7 +12,11 @@ const { title = "My Portfolio" } = Astro.props;
     <link rel="stylesheet" href="/styles/dark-mode.css" />
   </head>
   <body>
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-describedby="dark-mode-desc">
+      <span class="icon" aria-hidden="true">🌙</span>
+      <span id="dark-mode-desc" class="sr-only">Toggle site between dark and light mode</span>
+      <span class="tooltip" role="tooltip">Toggle dark mode</span>
+    </button>
     <div class="container">
       <aside class="sidebar">
         <slot name="sidebar" />

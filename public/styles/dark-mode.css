@@ -135,3 +135,51 @@ body.dark-mode .dark-mode-toggle {
 body.dark-mode .dark-mode-toggle:hover {
   background-color: #3f3f3f;
 }
+
+/* Visually hidden (accessible) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Tooltip for dark mode toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.dark-mode-toggle .tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 50%;
+  transform: translateX(50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+  z-index: 1100;
+}
+.dark-mode-toggle:hover .tooltip,
+.dark-mode-toggle:focus .tooltip,
+.dark-mode-toggle:focus-visible .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Matching tooltip colors in dark mode */
+body.dark-mode .dark-mode-toggle .tooltip {
+  background: #e8e8e8;
+  color: #2a2a2a;
+}
