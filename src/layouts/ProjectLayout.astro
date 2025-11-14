@@ -2,60 +2,93 @@
 const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" } = Astro.props;
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <script>
+      // Minimal synchronous theme setter for project pages
+      (function(){
+        try {
+          var KEY = 'portfolio-dark-mode';
+          var cookie = document.cookie || '';
+          var cookiePref = cookie.indexOf(KEY + '=true') !== -1 ? 'true' : (cookie.indexOf(KEY + '=false') !== -1 ? 'false' : null);
+          var ls = null;
+          try { ls = localStorage.getItem(KEY); } catch(e) {}
+          var pref = (cookiePref !== null) ? cookiePref : ls;
+          var flashStyle = document.createElement('style');
+          flashStyle.id = 'theme-flash-fix';
+          flashStyle.textContent = 'html.dark-mode, body.dark-mode, html.dark-mode .frame, body.dark-mode .frame { background-color: #1a1a1a !important; color: #dea95fc8 !important; }';
+          document.head.appendChild(flashStyle);
+          if (pref === 'true') {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+          } else if (pref === null) {
+            try {
+              if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+              }
+            } catch (e) {}
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/project.css" />
+    <link rel="stylesheet" href="/styles/dark-mode.css" />
   </head>
   <body>
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-describedby="dark-mode-desc">
+      <span class="icon" aria-hidden="true">🌙</span>
+      <span id="dark-mode-desc" class="sr-only">Toggle site between dark and light mode</span>
+      <span class="tooltip" role="tooltip">Dark mode</span>
+    </button>
     <div class="container">
       <aside class="sidebar">
         <slot name="sidebar" />
       </aside>
 
-<main class="content">
-  <nav class="breadcrumb">
-    <slot name="breadcrumb" />
-  </nav>
+  <main class="content">
+    <nav class="breadcrumb">
+      <slot name="breadcrumb" />
+    </nav>
 
-  <article class="project">
-    <h1>{icon} {title}</h1>
+    <article class="project">
+      <h1>{icon} {title}</h1>
 
-          {image && (
-            <img src={image} alt={title + " artwork"} class="project-hero" />
-          )}
+      {image && (
+        <img src={image} alt={title + " artwork"} class="project-hero" />
+      )}
 
-          <section class="project-info">
-            <p><strong>Medium:</strong> {medium}</p>
-            <p><strong>Year:</strong> {year}</p>
-            {tags.length > 0 && (
-              <p><strong>Tags:</strong> {tags.join(", ")}</p>
-            )}
-          </section>
+      <section class="project-info">
+        <p><strong>Medium:</strong> {medium}</p>
+        <p><strong>Year:</strong> {year}</p>
+        {tags.length > 0 && (
+          <p><strong>Tags:</strong> {tags.join(", ")}</p>
+        )}
+      </section>
 
-          <slot /> <!-- Content goes here -->
+      <slot />
 
-          <a href={backLink} class="back-link">← Back to Gallery</a>
-        </article>
-      </main>
+      <a href={backLink} class="back-link">← Back to Gallery</a>
+    </article>
+  </main>
     </div>
 
   <script>
-  const observers = document.querySelectorAll('.animate-slide');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+    const observers = document.querySelectorAll('.animate-slide');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
     });
-  });
+    observers.forEach(el => observer.observe(el));
+  </script>
 
-  observers.forEach(el => observer.observe(el));
-</script>
+  <script src="/scripts/dark-mode.js" is:inline></script>
 
   </body>
 </html>

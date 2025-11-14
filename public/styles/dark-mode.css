@@ -1,110 +1,130 @@
 /* Dark mode styles */
-body.dark-mode {
+/* Support both html.dark-mode (set early) and body.dark-mode (set later) */
+html.dark-mode, body.dark-mode {
   background-color: #1a1a1a;
   color: #dea95fc8;
 }
 
-body.dark-mode .sidebar {
+html.dark-mode .sidebar, body.dark-mode .sidebar {
   background-color: #2d2d2d;
   border-right-color: #3f3f3f;
 }
 
-body.dark-mode .sidebar a {
+html.dark-mode .sidebar a, body.dark-mode .sidebar a {
   color: #b8a895;
 }
 
-body.dark-mode .sidebar a::before,
-body.dark-mode .sidebar a::after {
+html.dark-mode .sidebar a::before, html.dark-mode .sidebar a::after,
+body.dark-mode .sidebar a::before, body.dark-mode .sidebar a::after {
   background-color: #4a4a4a;
 }
 
-body.dark-mode .sidebar a:hover {
+html.dark-mode .sidebar a:hover, body.dark-mode .sidebar a:hover {
   color: #d4c9b8;
 }
 
 /* Home page */
-body.dark-mode .intro {
+html.dark-mode .intro, body.dark-mode .intro {
   border-left-color: #a89878;
 }
 
 /* Gallery */
-body.dark-mode .art-piece {
+html.dark-mode .art-piece, body.dark-mode .art-piece {
   background-color: #2d2d2d;
   border-color: #3f3f3f;
 }
 
-body.dark-mode .filters button {
+html.dark-mode .filters button, body.dark-mode .filters button {
   background-color: #3f3f3f;
   color: #e8e8e8;
 }
 
-body.dark-mode .filters button:hover {
+html.dark-mode .filters button:hover, body.dark-mode .filters button:hover {
   background-color: #4a4a4a;
 }
 
-body.dark-mode .tag {
+html.dark-mode .tag, body.dark-mode .tag {
   background-color: #4a4a4a;
   color: #e8e8e8;
 }
 
-body.dark-mode .project-link a {
+html.dark-mode .project-link a, body.dark-mode .project-link a {
   color: #b8a895;
   background-color: #3f3f3f;
 }
 
-body.dark-mode .project-link a:hover {
+html.dark-mode .project-link a:hover, body.dark-mode .project-link a:hover {
   background-color: #4a4a4a;
 }
 
-body.dark-mode .gallery-banner {
+html.dark-mode .gallery-banner, body.dark-mode .gallery-banner {
   color: #e8e8e8;
+}
+
+/* Frames inside the gallery should get dark backgrounds + borders in dark mode */
+html.dark-mode .frame, body.dark-mode .frame {
+  background: #2d2d2d;
+  border-color: #4a4a4a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+html.dark-mode .frame img, body.dark-mode .frame img {
+  filter: none;
+}
+
+/* Generic button/link backgrounds in dark mode to avoid disappearing backgrounds */
+html.dark-mode button, body.dark-mode button,
+html.dark-mode .button, body.dark-mode .button,
+html.dark-mode a.button, body.dark-mode a.button {
+  background-color: #3f3f3f;
+  color: #e8e8e8;
+  border-color: #4a4a4a;
 }
 
 /* Project page */
-body.dark-mode .project h1 {
+html.dark-mode .project h1, body.dark-mode .project h1 {
   color: #d4c9b8;
 }
 
-body.dark-mode .project-info p {
+html.dark-mode .project-info p, body.dark-mode .project-info p {
   color: #b8a895;
 }
 
-body.dark-mode .project-description h2,
-body.dark-mode .project-tools h2 {
+html.dark-mode .project-description h2, body.dark-mode .project-description h2,
+html.dark-mode .project-tools h2, body.dark-mode .project-tools h2 {
   color: #b8a895;
 }
 
-body.dark-mode .project-hero {
+html.dark-mode .project-hero, body.dark-mode .project-hero {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-body.dark-mode .project-hero:hover {
+html.dark-mode .project-hero:hover, body.dark-mode .project-hero:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
               0 0 8px rgba(100, 80, 60, 0.3);
 }
 
-body.dark-mode .back-link {
+html.dark-mode .back-link, body.dark-mode .back-link {
   color: #b8a895;
   background-color: #3f3f3f;
 }
 
-body.dark-mode .back-link:hover {
+html.dark-mode .back-link:hover, body.dark-mode .back-link:hover {
   background-color: #4a4a4a;
 }
 
-body.dark-mode .breadcrumb {
+html.dark-mode .breadcrumb, body.dark-mode .breadcrumb {
   color: #8a7a65;
 }
 
-body.dark-mode .breadcrumb a {
+html.dark-mode .breadcrumb a, body.dark-mode .breadcrumb a {
   color: #8a7a65;
 }
 
-body.dark-mode .breadcrumb a:hover {
+html.dark-mode .breadcrumb a:hover, body.dark-mode .breadcrumb a:hover {
   color: #d4c9b8;
 }
 
-/* Dark mode toggle button */
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
@@ -128,12 +148,17 @@ body.dark-mode .breadcrumb a:hover {
   transform: scale(1.05);
 }
 
-body.dark-mode .dark-mode-toggle {
+html.dark-mode .dark-mode-toggle, body.dark-mode .dark-mode-toggle {
   border-color: #b8a895;
 }
 
-body.dark-mode .dark-mode-toggle:hover {
+html.dark-mode .dark-mode-toggle:hover, body.dark-mode .dark-mode-toggle:hover {
   background-color: #3f3f3f;
+}
+/* Ensure toggle has a visible background in dark mode */
+html.dark-mode .dark-mode-toggle, body.dark-mode .dark-mode-toggle {
+  background-color: #3f3f3f;
+  color: #e8e8e8;
 }
 
 /* Visually hidden (accessible) */
@@ -179,7 +204,7 @@ body.dark-mode .dark-mode-toggle:hover {
 }
 
 /* Matching tooltip colors in dark mode */
-body.dark-mode .dark-mode-toggle .tooltip {
+html.dark-mode .dark-mode-toggle .tooltip, body.dark-mode .dark-mode-toggle .tooltip {
   background: #98917f;
   color: #2a2a2a;
 }

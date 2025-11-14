@@ -8,6 +8,36 @@ const { title = "My Portfolio" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <script>
+      // Minimal synchronous theme setter: runs before CSS loads.
+      (function(){
+        try {
+          var KEY = 'portfolio-dark-mode';
+          var cookie = document.cookie || '';
+          var cookiePref = cookie.indexOf(KEY + '=true') !== -1 ? 'true' : (cookie.indexOf(KEY + '=false') !== -1 ? 'false' : null);
+          var ls = null;
+          try { ls = localStorage.getItem(KEY); } catch(e) {}
+          var pref = (cookiePref !== null) ? cookiePref : ls;
+          // quick-critical CSS to avoid flash for key elements
+          var flashStyle = document.createElement('style');
+          flashStyle.id = 'theme-flash-fix';
+          flashStyle.textContent = 'html.dark-mode, body.dark-mode, html.dark-mode .frame, body.dark-mode .frame { background-color: #1a1a1a !important; color: #dea95fc8 !important; }';
+          document.head.appendChild(flashStyle);
+          if (pref === 'true') {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+          } else if (pref === null) {
+            // respect OS preference when no explicit pref
+            try {
+              if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+              }
+            } catch (e) {}
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/dark-mode.css" />
   </head>
