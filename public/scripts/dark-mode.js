@@ -34,6 +34,18 @@
         button.innerHTML = isDarkMode ? sunSvg : moonSvg;
       }
       button.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+
+      // Update visible tooltip text to reflect current mode (shows current mode name)
+      const tooltip = button.querySelector('.tooltip');
+      if (tooltip) {
+        tooltip.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+      }
+
+      // Update the assistive description (screen reader) to announce current mode
+      const srDesc = document.getElementById('dark-mode-desc');
+      if (srDesc) {
+        srDesc.textContent = isDarkMode ? 'Light mode active' : 'Dark mode active';
+      }
     }
   }
   

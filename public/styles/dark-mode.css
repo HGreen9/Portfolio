@@ -157,11 +157,11 @@ body.dark-mode .dark-mode-toggle:hover {
 }
 .dark-mode-toggle .tooltip {
   position: absolute;
-  bottom: calc(100% + 8px);
-  right: 50%;
-  transform: translateX(50%);
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
   background: #222;
-  color: #fff;
+  color: #c6bfac;
   padding: 6px 8px;
   border-radius: 4px;
   font-size: 0.85rem;
@@ -180,6 +180,6 @@ body.dark-mode .dark-mode-toggle:hover {
 
 /* Matching tooltip colors in dark mode */
 body.dark-mode .dark-mode-toggle .tooltip {
-  background: #e8e8e8;
+  background: #98917f;
   color: #2a2a2a;
 }
