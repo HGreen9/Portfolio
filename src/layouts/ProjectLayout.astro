@@ -18,10 +18,7 @@ const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" 
           var ls = null;
           try { ls = localStorage.getItem(KEY); } catch(e) {}
           var pref = (cookiePref !== null) ? cookiePref : ls;
-          var flashStyle = document.createElement('style');
-          flashStyle.id = 'theme-flash-fix';
-          flashStyle.textContent = 'html.dark-mode, body.dark-mode, html.dark-mode .frame, body.dark-mode .frame { background-color: #1a1a1a !important; color: #dea95fc8 !important; }';
-          document.head.appendChild(flashStyle);
+          // critical styles moved to global.css, no inline injection here
           if (pref === 'true') {
             document.documentElement.classList.add('dark-mode');
             document.body.classList.add('dark-mode');
@@ -36,6 +33,7 @@ const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" 
         } catch (e) {}
       })();
     </script>
+    <style id="critical-dark-inline">html.dark-mode, body.dark-mode { background-color: #1a1a1a; color: #dea95fc8; }</style>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/project.css" />
     <link rel="stylesheet" href="/styles/dark-mode.css" />

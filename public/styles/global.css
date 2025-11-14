@@ -12,6 +12,40 @@ body {
   line-height: 1.6;
 }
 
+/* Critical dark-mode overrides loaded early with global.css
+   These ensure key pieces (frames, banners, buttons, toggle) have
+   dark styles available as soon as global.css is applied. */
+html.dark-mode, body.dark-mode {
+  background-color: #1a1a1a;
+  color: #dea95fc8;
+}
+
+html.dark-mode .frame, body.dark-mode .frame {
+  background: #2d2d2d;
+  border-color: #4a4a4a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+html.dark-mode .gallery-banner, body.dark-mode .gallery-banner {
+  color: #e8e8e8;
+}
+
+html.dark-mode .filters button, body.dark-mode .filters button,
+html.dark-mode button, body.dark-mode button,
+html.dark-mode .button, body.dark-mode .button,
+html.dark-mode a.button, body.dark-mode a.button {
+  background-color: #3f3f3f;
+  color: #e8e8e8;
+  border-color: #4a4a4a;
+}
+
+html.dark-mode .dark-mode-toggle, body.dark-mode .dark-mode-toggle {
+  background-color: #3f3f3f;
+  color: #e8e8e8;
+  border-color: #b8a895;
+}
+
+
 .container {
   display: flex;
   min-height: 100vh;
