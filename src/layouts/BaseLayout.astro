@@ -8,17 +8,19 @@ const { title = "My Portfolio" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-<link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/dark-mode.css" />
   </head>
   <body>
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
     <div class="container">
-  <aside class="sidebar">
-    <slot name="sidebar" />
-  </aside>
-  <main class="content">
-    <slot />
-  </main>
-</div>
-
+      <aside class="sidebar">
+        <slot name="sidebar" />
+      </aside>
+      <main class="content">
+        <slot />
+      </main>
+    </div>
+    <script src="/scripts/dark-mode.js" is:inline></script>
   </body>
 </html>
