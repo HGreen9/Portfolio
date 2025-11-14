@@ -1,34 +1,20 @@
 ---
-import Tabs from '../components/Tabs.astro';
-import Gallery from '../components/Gallery.astro';
-
-const subjects = [
-  {
-    key: 'nature',
-    label: 'Nature',
-    images: ['/img/forest.jpg','/img/leaf.jpg','/img/mountain.jpg']
-  },
-  {
-    key: 'architecture',
-    label: 'Architecture',
-    images: ['/img/building1.jpg','/img/bridge.jpg','/img/city.jpg']
-  },
-  {
-    key: 'portraits',
-    label: 'Portraits',
-    images: ['/img/person1.jpg','/img/person2.jpg','/img/person3.jpg']
-  }
-];
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>My Gallery</title>
-    <link rel="stylesheet" href="/styles/global.css">
-  </head>
-  <body>
-    <h1>My Gallery</h1>
-    <Tabs items={subjects} />
-  </body>
-</html>
+<BaseLayout title="Welcome to My Portfolio">
+  <Fragment slot="sidebar">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/illustration">Illustration</a>
+      <a href="/gamedev">Game Dev</a>
+      <a href="/web">Web</a>
+      <a href="/ux">UX</a>
+      <a href="/photography">Photography</a>
+      <a href="/branding">Brand & Ad</a>
+    </nav>
+  </Fragment>
+
+  <h1>🌿 Welcome to My Portfolio</h1>
+  <p>This is your cozy creative space to explore all my work across design, games, and more.</p>
+</BaseLayout>

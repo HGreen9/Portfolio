@@ -1,16 +1,86 @@
-:root {
-  --astro-color: #2a9d8f;
+/* Basic reset and cozy base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.5;
+  font-family: 'Georgia', serif;
+  background-color: #f4f1ed;
+  color: #2e2e2e;
+  line-height: 1.6;
 }
 
-h1 {
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  width: 220px;
+  background-color: #e3dfd5;
+  padding: 2rem;
+  border-right: 2px solid #c2bba4;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.sidebar a {
+  position: relative;
+  display: block;
   margin-bottom: 1rem;
-  color: var(--astro-color);
+  padding: 0.3rem 0;
+  color: #5a4a3b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease, transform 0.2s ease;
+  transform-origin: left center;
+}
+
+/* The decorative lines */
+.sidebar a::before,
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #c9bfa8;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+.sidebar a::before {
+  top: 0;
+}
+
+.sidebar a::after {
+  bottom: 0;
+}
+
+/* On hover: lines grow, text nudges */
+.sidebar a:hover {
+  color: #7b6e55;
+  transform: translateX(4px) scale(1.05);
+  border-radius: 1px;
+}
+
+.sidebar a:hover::before,
+.sidebar a:hover::after {
+  transform: scaleX(1);
+}
+
+html {
+  scroll-behavior: smooth;
 }

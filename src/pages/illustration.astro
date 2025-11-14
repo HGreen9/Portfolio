@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Gallerybanner from '../components/illustration/Gallerybanner.astro';
+import Gallerycards from '../components/illustration/Gallerycards.astro';
+import Backtotop from '../components/Backtotop.astro';
+---
+
+<BaseLayout title="Illustration Work">
+  <Sidebar slot="sidebar" />
+
+  <link rel="stylesheet" href="/styles/gallery.css" />
+  <script src="/scripts/highlight.js" defer></script>
+
+  <h1>🖌️ Illustration Gallery</h1>
+
+  <div class="filters">
+    <button data-filter="all">Show All</button>
+    <button data-filter="Digital">Digital</button>
+    <button data-filter="Mixed">Mixed</button>
+    <button data-filter="Sketch">Sketch</button>
+  </div>
+
+<section class="gallery-banner">
+  <Gallerybanner />
+</section>
+
+  <div class="gallery">
+    <Gallerycards />
+  </div>
+  
+  <Backtotop />
+
+  <script src="/scripts/filter.js" defer></script>
+</BaseLayout>
