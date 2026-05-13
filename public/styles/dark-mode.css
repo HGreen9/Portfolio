@@ -68,6 +68,16 @@ html.dark-mode .frame, body.dark-mode .frame {
   box-shadow: 0 4px 10px rgba(0,0,0,0.35);
 }
 
+html.dark-mode .frame.offset img, body.dark-mode .frame.offset img {
+  filter: none;
+}
+
+html.dark-mode .frame.offset, body.dark-mode .frame.offset {
+  background: #2d2d2d;
+  border-color: #4a4a4a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
 html.dark-mode .frame img, body.dark-mode .frame img {
   filter: none;
 }
