@@ -122,6 +122,11 @@
   transform: rotate(2deg);
 }
 
+.frame.offset img {
+  object-fit: cover;
+  object-position: center top;
+}
+
 .art-piece.highlighted {
   outline: 2px solid #b79f7c;
   box-shadow: 0 0 12px #b79f7c;
