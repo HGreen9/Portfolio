@@ -114,12 +114,16 @@
 }
 
 .frame:hover {
-  transform: scale(1.05) rotate(-1deg);
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .frame.offset {
   margin-top: 2rem;
   transform: rotate(2deg);
+}
+
+.frame.offset:hover {
+  transform: scale(1.05) rotate(4deg);
 }
 
 .frame.offset img {
