@@ -3,7 +3,7 @@ const { imgSrc, alt, title, description, tags = [], projectLink = "", id = "" } 
 ---
 
 <div class="art-piece" id={id} data-tags={tags.join(" ")}>
-  <img src={imgSrc} alt={alt} />
+  <img src={imgSrc} alt={alt} draggable="false"/>
   <p><strong>{title}</strong> – {description}</p>
 
   {tags.length > 0 && (
