@@ -26,6 +26,7 @@
 .art-piece img {
   max-height: 200px;
   object-fit: cover;
+  object-position: center top;
   width: 100%;
   border-radius: 8px;
   margin-bottom: 0.5rem;
