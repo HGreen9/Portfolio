@@ -1,7 +1,7 @@
 <div class="dust-particles" aria-hidden="true"></div>
 
 <style>
-  .dust-particles {
+  :global(.dust-particles) {
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -9,16 +9,16 @@
     z-index: 1;
   }
 
-  .dust-particle {
+  :global(.dust-particle) {
     position: absolute;
     border-radius: 50%;
-    background: rgba(247, 236, 212, 0.75);
-    box-shadow: 0 0 8px rgba(247, 236, 212, 0.45);
+    background: rgba(247, 236, 212, 0.95);
+    box-shadow: 0 0 12px rgba(247, 236, 212, 0.65);
     opacity: 0;
     animation: dustFloat linear infinite;
   }
 
-  @keyframes dustFloat {
+  :global(@keyframes dustFloat) {
     0% {
       transform: translate3d(0, 20px, 0) scale(0.8);
       opacity: 0;
