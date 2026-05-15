@@ -38,18 +38,20 @@ const { title = "My Portfolio" } = Astro.props;
     <style id="critical-dark-inline">html.dark-mode, body.dark-mode { background-color: #1a1a1a; color: #dea95fc8; }</style>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/dark-mode.css" />
+    <link rel="stylesheet" href="/styles/media-query.css" />
   </head>
   <body>
+    <a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-describedby="dark-mode-desc">
       <span class="icon" aria-hidden="true">🌙</span>
       <span id="dark-mode-desc" class="sr-only">Toggle site between dark and light mode</span>
       <span class="tooltip" role="tooltip">Dark mode</span>
     </button>
     <div class="container">
-      <aside class="sidebar">
+      <nav class="sidebar" aria-label="Primary navigation">
         <slot name="sidebar" />
-      </aside>
-      <main class="content">
+      </nav>
+      <main id="main-content" class="content">
         <slot />
       </main>
     </div>

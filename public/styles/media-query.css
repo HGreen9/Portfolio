@@ -1,0 +1,123 @@
+/* Responsive breakpoints and accessibility helpers */
+
+#skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background: #5a4a3b;
+  color: #f4f1ed;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 1001;
+  transition: transform 0.2s ease, top 0.2s ease;
+}
+
+#skip-link:focus-visible {
+  top: 1rem;
+  outline: 3px solid #d6c8b2;
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #b29b72;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid #c2bba4;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .sidebar a {
+    font-size: 0.98rem;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .project {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+
+  .project h1 {
+    font-size: 1.85rem;
+  }
+
+  .project-hero {
+    margin: 1.5rem auto;
+  }
+
+  .project-description,
+  .project-tools {
+    margin-top: 1.5rem;
+  }
+
+  .back-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    padding: 0.9rem;
+  }
+
+  .sidebar a {
+    font-size: 0.95rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .project {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .project h1 {
+    font-size: 1.65rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .dark-mode-toggle {
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 12px;
+    font-size: 1.25rem;
+  }
+}

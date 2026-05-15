@@ -37,19 +37,21 @@ const { title, tags = [], year, medium, image, backLink = "/", icon = "🖼️" 
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/project.css" />
     <link rel="stylesheet" href="/styles/dark-mode.css" />
+    <link rel="stylesheet" href="/styles/media-query.css" />
   </head>
   <body>
+    <a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-describedby="dark-mode-desc">
       <span class="icon" aria-hidden="true">🌙</span>
       <span id="dark-mode-desc" class="sr-only">Toggle site between dark and light mode</span>
       <span class="tooltip" role="tooltip">Dark mode</span>
     </button>
     <div class="container">
-      <aside class="sidebar">
+      <nav class="sidebar" aria-label="Primary navigation">
         <slot name="sidebar" />
-      </aside>
+      </nav>
 
-  <main class="content">
+  <main id="main-content" class="content">
     <nav class="breadcrumb">
       <slot name="breadcrumb" />
     </nav>
