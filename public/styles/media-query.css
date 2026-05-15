@@ -1,6 +1,7 @@
 /* Responsive breakpoints and accessibility helpers */
 
 #skip-link {
+  display: none;
   position: absolute;
   top: -40px;
   left: 1rem;

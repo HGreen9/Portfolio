@@ -57,12 +57,6 @@ html.dark-mode .project-link a:hover, body.dark-mode .project-link a:hover {
   background-color: #4a4a4a;
 }
 
-html.dark-mode .sidebar-toggle, body.dark-mode .sidebar-toggle {
-  background-color: #978874;
-  border-color: #978874;
-  color: #1a1a1a;
-}
-
 html.dark-mode .gallery-banner, body.dark-mode .gallery-banner {
   color: #e8e8e8;
 }
@@ -95,6 +89,12 @@ html.dark-mode a.button, body.dark-mode a.button {
   background-color: #3f3f3f;
   color: #e8e8e8;
   border-color: #4a4a4a;
+}
+
+html.dark-mode .sidebar-toggle, body.dark-mode .sidebar-toggle {
+  background-color: #978874;
+  border-color: #978874;
+  color: #1a1a1a;
 }
 
 /* Project page */

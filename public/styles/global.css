@@ -74,8 +74,8 @@ html.dark-mode .dark-mode-toggle, body.dark-mode .dark-mode-toggle {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
-  width: 48%;
-  max-width: 240px;
+  width: 50%;
+  max-width: 220px;
   background: #f4f1ed;
   border: 2px solid #5a4a3b;
   color: #5a4a3b;
