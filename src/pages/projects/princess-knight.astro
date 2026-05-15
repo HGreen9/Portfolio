@@ -1,7 +1,7 @@
 ---
-import ProjectLayout from '../../layouts/ProjectLayout.astro';
-import Sidebar from '../../components/Sidebar.astro';
-import Sparkle from '../../components/Sparkle.astro';
+import ProjectLayout from '../../layouts/projectLayout.astro';
+import Sidebar from '../../components/sidebar.astro';
+import DustParticle from '../../components/dustParticle.astro';
 ---
 
 <ProjectLayout
@@ -13,7 +13,8 @@ import Sparkle from '../../components/Sparkle.astro';
   image="/images/Princess&Knight2026.png"
   backLink="/illustration"
 >
-<Sparkle />
+
+  <DustParticle />
 
   <Fragment slot="breadcrumb">
     <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>The Princess and the Knight</span>
@@ -42,4 +43,4 @@ import Sparkle from '../../components/Sparkle.astro';
     </ul>
   </section>
 
-</ProjectLayout>
+</projectLayout>

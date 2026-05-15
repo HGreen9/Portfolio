@@ -1,0 +1,79 @@
+<div class="dust-particles" aria-hidden="true"></div>
+
+<style>
+  .dust-particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .dust-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(247, 236, 212, 0.75);
+    box-shadow: 0 0 8px rgba(247, 236, 212, 0.45);
+    opacity: 0;
+    animation: dustFloat linear infinite;
+  }
+
+  @keyframes dustFloat {
+    0% {
+      transform: translate3d(0, 20px, 0) scale(0.8);
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0.75;
+    }
+
+    80% {
+      opacity: 0.55;
+    }
+
+    100% {
+      transform: translate3d(var(--drift), -120px, 0) scale(1.2);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function createDustParticles() {
+    const container = document.querySelector(".dust-particles");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const particleCount = 45;
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement("span");
+      particle.className = "dust-particle";
+
+      const size = Math.random() * 3 + 1;
+      const left = Math.random() * 100;
+      const top = Math.random() * 100;
+      const duration = Math.random() * 12 + 10;
+      const delay = Math.random() * -20;
+      const drift = Math.random() * 80 - 40;
+
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${left}%`;
+      particle.style.top = `${top}%`;
+      particle.style.animationDuration = `${duration}s`;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.setProperty("--drift", `${drift}px`);
+
+      container.appendChild(particle);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", createDustParticles);
+  } else {
+    createDustParticles();
+  }
+</script>
