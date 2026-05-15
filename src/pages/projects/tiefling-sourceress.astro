@@ -1,0 +1,41 @@
+---
+import ProjectLayout from '../../layouts/projectLayout.astro';
+import Sidebar from '../../components/sidebar.astro';
+import DustParticle from '../../components/dustParticle.astro';
+---
+
+<ProjectLayout
+  title="Tiefling Sourceress"
+  icon="🕸️"
+  year="2026"
+  medium="Digital Illustration"
+  tags={["Digital"]}
+  image="/images/Tiefling2026.png"
+  backLink="/illustration"
+>
+
+  <DustParticle />
+
+  <Fragment slot="breadcrumb">
+    <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>Tiefling Sourceress</span>
+  </Fragment>
+
+  <Sidebar slot="sidebar" />
+
+  <section class="project-description">
+        <section class="project-description animate-slide">
+        <h2>About the Project</h2>
+    <p>
+      Nixara is a tiefling sourceress with a mysterious past and a powerful connection to the arcane arts.
+    </p>
+        </section>
+  </section>
+
+  <section class="project-tools">
+    <h2>Tools Used</h2>
+    <ul>
+      <li>ibisPaint X</li>
+    </ul>
+  </section>
+
+</projectLayout>

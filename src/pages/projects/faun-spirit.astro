@@ -1,0 +1,41 @@
+---
+import ProjectLayout from '../../layouts/projectLayout.astro';
+import Sidebar from '../../components/sidebar.astro';
+import DustParticle from '../../components/dustParticle.astro';
+---
+
+<ProjectLayout
+  title="Faun Spirit"
+  icon="🪾"
+  year="2025"
+  medium="Digital Illustration"
+  tags={["Digital"]}
+  image="/images/FaunSpirit2025.png"
+  backLink="/illustration"
+>
+
+  <DustParticle />
+
+  <Fragment slot="breadcrumb">
+    <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>Faun Spirit</span>
+  </Fragment>
+
+  <Sidebar slot="sidebar" />
+
+  <section class="project-description">
+        <section class="project-description animate-slide">
+        <h2>About the Project</h2>
+    <p>
+    Mapel is a forest spirit resembling a humanoid fanged deer, her horns are adorned with grape vines and her body is cloaked in furs.  The sigil on her chest written in a language unknown to the modern world.
+    </p>
+        </section>
+  </section>
+
+  <section class="project-tools">
+    <h2>Tools Used</h2>
+    <ul>
+      <li>ibisPaint X</li>
+    </ul>
+  </section>
+
+</projectLayout>
