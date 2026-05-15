@@ -163,3 +163,30 @@
 .frame.faded:hover {
   transform: none;
 }
+
+@media (max-width: 400px) {
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .filters button {
+    margin-right: 0;
+    padding: 0.5rem 0.8rem;
+    flex: 1 0 auto;
+    min-width: 48%;
+    text-align: center;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    margin-bottom: 0.35rem;
+  }
+}
