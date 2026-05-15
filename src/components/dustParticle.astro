@@ -12,10 +12,19 @@
   :global(.dust-particle) {
     position: absolute;
     border-radius: 50%;
-    background: rgba(247, 236, 212, 0.95);
-    box-shadow: 0 0 12px rgba(247, 236, 212, 0.65);
+    background: rgba(255, 223, 131, 0.92);
+    box-shadow: 0 0 16px rgba(255, 223, 131, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     opacity: 0;
     animation: dustFloat linear infinite;
+    mix-blend-mode: screen;
+  }
+
+  :global(html.dark-mode .dust-particle) {
+    background: rgba(247, 236, 212, 0.95);
+    box-shadow: 0 0 12px rgba(247, 236, 212, 0.65);
+    border-color: rgba(255, 255, 255, 0.15);
+    mix-blend-mode: normal;
   }
 
   :global(@keyframes dustFloat) {
@@ -46,7 +55,7 @@
 
     container.innerHTML = "";
 
-    const particleCount = 45;
+    const particleCount = 70;
 
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement("span");
