@@ -1,21 +1,11 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
+import Sidebar from '../components/sidebar.astro';
 import Home from './home.astro';
 ---
 
 <BaseLayout title="Welcome to My Portfolio">
-  <Fragment slot="sidebar">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/illustration">Illustration</a>
-      <a href="/gamedev">Game Dev</a>
-      <a href="/web">Web</a>
-      <a href="/ux">UX</a>
-      <a href="/photography">Photography</a>
-      <a href="/branding">Brand & Ad</a>
-    </nav>
-  </Fragment>
+  <Sidebar slot="sidebar" />
 
-    <Home />
-  
+  <Home />
 </BaseLayout>
