@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
 import Sidebar from '../components/sidebar.astro';
+import GameDevBanner from '../components/gamedev/gallerybanner.astro';
+import GameDevCards from '../components/gamedev/gallerycards.astro';
 import Backtotop from '../components/backtotop.astro';
 import DustParticle from '../components/dustParticle.astro';
 ---
@@ -15,8 +17,20 @@ import DustParticle from '../components/dustParticle.astro';
 
   <div class="filters">
     <button data-filter="all">Show All</button>
-    <button data-filter="Digital">Digital</button>
-    <button data-filter="Tangible">Tangible</button>
+    <button data-filter="Game">Game</button>
+    <button data-filter="UI">UI</button>
+    <button data-filter="Concept">Concept</button>
+    <button data-filter="Animation">Animation</button>
+    <button data-filter="Character">Character</button>
+    <button data-filter="Environment">Environment</button>
+  </div>
+
+  <section class="gallery-banner">
+    <GameDevBanner />
+  </section>
+
+  <div class="gallery">
+    <GameDevCards />
   </div>
   
   <Backtotop />
