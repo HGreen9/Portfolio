@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#4a90e2"/>
+  <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="44">Game Dev</text>
+  <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28">Placeholder 1</text>
+</svg>
