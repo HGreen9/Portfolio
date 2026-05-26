@@ -1,52 +1,91 @@
-# Astro Starter Kit: Basics
+# Rowanberry Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+A creative portfolio showcasing visual design, UX, front-end development, storytelling, and immersive digital experiences.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Built with a focus on warmth, atmosphere, accessibility, and thoughtful craftsmanship.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## About This Project
 
-## 🚀 Project Structure
+This portfolio was created to share my creative work, design philosophy, and evolving artistic journey. The site blends cozy natural aesthetics with functional, user-centered design to create a welcoming and engaging experience.
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside you'll find:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+* UX and interface design projects
+* Front-end web development work
+* Branding and visual identity pieces
+* Interactive and narrative-driven concepts
+* Illustration, photography, and creative experiments
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## About Me
 
-All commands are run from the root of the project, from a terminal:
+Hi, I’m Hannah! I'm a Visual Communications Design graduate from Eastern Washington University with certificates in User Experience and Front End Web Design.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+I’m passionate about story-driven experiences and the subtle details that shape how people emotionally experience digital spaces. My work blends visual storytelling, atmosphere, accessibility, and functionality to create experiences that feel intuitive, immersive, and human.
 
-## 👀 Want to learn more?
+I believe thoughtful design lives in the small details — the choices people may not consciously notice, but deeply feel when they’re missing. Those nearly invisible elements are what transform something functional into something emotionally resonant.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Design Goals
+
+This project focuses on:
+
+* Inclusive and accessible design
+* Responsive layouts across devices
+* Intuitive user experiences
+* Emotional storytelling through interaction
+* Warm, nature-inspired visual aesthetics
+* Balancing creativity with functionality
+
+---
+
+## Tools & Technologies
+
+* HTML
+* CSS
+* JavaScript
+* Figma
+* Adobe Creative Suite
+* Git & GitHub
+
+---
+
+## Inspiration
+
+Inspired by:
+
+* Interactive storytelling
+* Atmospheric game design
+* Emotion-driven visual experiences
+* Cozy and welcoming digital spaces
+
+---
+
+## Future Improvements
+
+Planned updates include:
+
+* Expanded project case studies
+* Motion and animation elements
+* Additional accessibility improvements
+* Interactive portfolio features
+* Shop integration for future handcrafted work
+* A process journal documenting creative development
+
+---
+
+## Contact
+
+Portfolio: [[Rowanberrydesigns](https://rowanberrydesigns.netlify.app/)]
+Email: [hannah.green.2025@gmail.com]
+LinkedIn: [www.linkedin.com/in/hannahgreen-interactive-design]
+
+---
+
+## Credits
+
+All artwork, designs, and creative content are created by Hannah unless otherwise noted.
