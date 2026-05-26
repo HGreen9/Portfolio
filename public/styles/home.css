@@ -6,3 +6,27 @@
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+.about-me {
+  max-width: 750px;
+  margin: 4rem auto;
+  line-height: 1.8;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  color: #5f6f52;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #a67c52;
+  transform: translateY(-3px);
+}
