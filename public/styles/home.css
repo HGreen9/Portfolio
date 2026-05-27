@@ -1,6 +1,10 @@
+.home {
+ margin-left: 2rem;
+}
+
 .intro {
   border-left: 4px solid #584d419b;
-  max-width: 1500px;
+  max-width: 1200px;
   margin-left: 2rem;
   margin-top: 1rem;
   padding-left: 6px;
@@ -10,7 +14,7 @@
 
 .about-me {
   border-left: 4px solid #584d419b;
-  max-width: 1500px;
+  max-width: 1200px;
   margin-left: 2rem;
   margin-top: 1rem;
   padding-left: 6px;
