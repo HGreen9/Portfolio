@@ -89,3 +89,5 @@ LinkedIn: [www.linkedin.com/in/hannahgreen-interactive-design]
 ## Credits
 
 All artwork, designs, and creative content are created by Hannah unless otherwise noted.
+
+Favicons from: [[Favicon.io](https://favicon.io/emoji-favicons/herb/)]
