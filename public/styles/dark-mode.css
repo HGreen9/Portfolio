@@ -75,7 +75,7 @@ html.dark-mode .gallery-banner, body.dark-mode .gallery-banner {
 
 /* Highlighted gallery cards in dark mode */
 html.dark-mode .art-piece.highlighted, body.dark-mode .art-piece.highlighted {
-  outline: 3px solid #d4a574;
+  outline: 3px solid #8f7355;
   box-shadow: 0 0 18px rgba(212, 165, 116, 0.7);
   animation: fadeHighlightDark 2.5s ease forwards;
 }
