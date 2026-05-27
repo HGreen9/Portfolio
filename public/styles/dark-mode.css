@@ -35,6 +35,15 @@ html.dark-mode .about-me, body.dark-mode .about-me {
 html.dark-mode .art-piece, body.dark-mode .art-piece {
   background-color: #2d2d2d;
   border-color: #3f3f3f;
+  color: #b8a895;
+}
+
+html.dark-mode .art-piece p, body.dark-mode .art-piece p {
+  color: #b8a895;
+}
+
+html.dark-mode .art-piece strong, body.dark-mode .art-piece strong {
+  color: #d4c9b8;
 }
 
 html.dark-mode .filters button, body.dark-mode .filters button {
