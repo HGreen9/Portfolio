@@ -27,6 +27,9 @@ html.dark-mode .sidebar a:hover, body.dark-mode .sidebar a:hover {
 html.dark-mode .intro, body.dark-mode .intro {
   border-left-color: #a89878;
 }
+html.dark-mode .about-me, body.dark-mode .about-me {
+  border-left-color: #a89878;
+}
 
 /* Gallery */
 html.dark-mode .art-piece, body.dark-mode .art-piece {

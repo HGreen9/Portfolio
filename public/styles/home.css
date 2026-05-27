@@ -8,7 +8,8 @@
 }
 
 .about-me {
-  max-width: 750px;
+  border-left: 4px solid #584d419b;
+  max-width: 1000px;
   margin-left: 2rem;
   margin-top: 1rem;
   padding-left: 6px;
