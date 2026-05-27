@@ -112,6 +112,7 @@ html.dark-mode .dark-mode-toggle, body.dark-mode .dark-mode-toggle {
 
 .content {
   flex: 1;
+  margin-left: 2rem;
   padding: 2rem;
 }
 
