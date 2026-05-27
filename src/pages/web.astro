@@ -1,6 +1,41 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
 import Sidebar from '../components/sidebar.astro';
+import WebBanner from '../components/web/gallerybanner.astro';
+import WebCards from '../components/web/gallerycards.astro';
 import Backtotop from '../components/backtotop.astro';
 import DustParticle from '../components/dustParticle.astro';
 ---
+
+<BaseLayout title="Web Projects">
+	<Sidebar slot="sidebar" />
+
+	<link rel="stylesheet" href="/styles/gallery.css" />
+	<script src="/scripts/highlight.js" defer></script>
+
+	<h1>🌐 Web Projects Gallery</h1>
+
+	<div class="filters">
+		<button data-filter="all">Show All</button>
+		<button data-filter="Frontend">Frontend</button>
+		<button data-filter="UI">UI</button>
+		<button data-filter="Responsive">Responsive</button>
+		<button data-filter="Interaction">Interaction</button>
+	</div>
+
+	<section class="gallery-banner">
+		<WebBanner />
+	</section>
+
+	<div class="gallery">
+		<WebCards />
+	</div>
+  
+	<Backtotop />
+
+	<script src="/scripts/filter.js" defer></script>
+
+</BaseLayout>
+
+<DustParticle />
+

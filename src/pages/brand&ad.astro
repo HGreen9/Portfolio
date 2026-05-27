@@ -1,6 +1,39 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
 import Sidebar from '../components/sidebar.astro';
+import BrandBanner from '../components/brand-ad/gallerybanner.astro';
+import BrandCards from '../components/brand-ad/gallerycards.astro';
 import Backtotop from '../components/backtotop.astro';
 import DustParticle from '../components/dustParticle.astro';
 ---
+
+<BaseLayout title="Brand & Advertising">
+	<Sidebar slot="sidebar" />
+
+	<link rel="stylesheet" href="/styles/gallery.css" />
+	<script src="/scripts/highlight.js" defer></script>
+
+	<h1>📣 Brand & Advertising</h1>
+
+	<div class="filters">
+		<button data-filter="all">Show All</button>
+		<button data-filter="Identity">Identity</button>
+		<button data-filter="Campaign">Campaign</button>
+		<button data-filter="Packaging">Packaging</button>
+		<button data-filter="Print">Print</button>
+	</div>
+
+	<section class="gallery-banner">
+		<BrandBanner />
+	</section>
+
+	<div class="gallery">
+		<BrandCards />
+	</div>
+  
+	<Backtotop />
+
+	<script src="/scripts/filter.js" defer></script>
+</BaseLayout>
+
+<DustParticle />

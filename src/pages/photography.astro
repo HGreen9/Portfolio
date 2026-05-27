@@ -1,6 +1,41 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
 import Sidebar from '../components/sidebar.astro';
+import PhotoBanner from '../components/photography/gallerybanner.astro';
+import PhotoCards from '../components/photography/gallerycards.astro';
 import Backtotop from '../components/backtotop.astro';
 import DustParticle from '../components/dustParticle.astro';
 ---
+
+<BaseLayout title="Photography Portfolio">
+	<Sidebar slot="sidebar" />
+
+	<link rel="stylesheet" href="/styles/gallery.css" />
+	<script src="/scripts/highlight.js" defer></script>
+
+	<h1>📸 Photography Portfolio</h1>
+
+	<div class="filters">
+		<button data-filter="all">Show All</button>
+		<button data-filter="Portrait">Portrait</button>
+		<button data-filter="Landscape">Landscape</button>
+		<button data-filter="Product">Product</button>
+		<button data-filter="Street">Street</button>
+	</div>
+
+	<section class="gallery-banner">
+		<PhotoBanner />
+	</section>
+
+	<div class="gallery">
+		<PhotoCards />
+	</div>
+  
+	<Backtotop />
+
+	<script src="/scripts/filter.js" defer></script>
+</BaseLayout>
+
+<DustParticle />
+
+
