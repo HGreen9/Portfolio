@@ -1,3 +1,7 @@
+h1, h2 {
+  margin-left: 2rem;
+}
+
 .intro {
   border-left: 4px solid #584d419b;
   max-width: 1200px;
