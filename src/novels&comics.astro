@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/baseLayout.astro';
+import Sidebar from '../components/sidebar.astro';
+import Backtotop from '../components/backtotop.astro';
+import DustParticle from '../components/dustParticle.astro';
+---
+
+<BaseLayout title="Novels & Comics">
+	<Sidebar slot="sidebar" />
+
+	<link rel="stylesheet" href="/styles/gallery.css" />
+	<script src="/scripts/highlight.js" defer></script>
+
+	<h1>📖 Novels & Comics Gallery</h1>
+
+	<div class="filters">
+		<button data-filter="all">Show All</button>
+		<button data-filter="Novellas">Novellas</button>
+		<button data-filter="Novels">Novels</button>
+		<button data-filter="Web Comics">Web Comics</button>
+	</div>
+
+	<section class="gallery-banner">
+		
+	</section>
+
+	<div class="gallery">
+	
+	</div>
+  
+	<Backtotop />
+
+	<script src="/scripts/filter.js" defer></script>
+
+</BaseLayout>
+
+<DustParticle />
+
