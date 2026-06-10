@@ -1,0 +1,38 @@
+---
+import ProjectLayout from '../../layouts/projectLayout.astro';
+import Sidebar from '../../components/sidebar.astro';
+import DustParticle from '../../components/dustParticle.astro';
+---
+
+<ProjectLayout
+  title="Nyxara Smoke and Glass"
+  icon="🍷"
+  year="2026"
+  medium="Digital Illustration"
+  tags={["Digital"]}
+  image="/images/Nyx glass.png"
+  backLink="/illustration"
+>
+
+  <Fragment slot="breadcrumb">
+    <a href="/">Home</a> / <a href="/illustration">Illustration</a> / <span>Nyxara Smoke and Glass</span>
+  </Fragment>
+
+  <Sidebar slot="sidebar" />
+
+  <section class="project-description">
+    <h2>About the Project</h2>
+    <p>
+      A Digital Illustration for a D&D playlist, 2026.
+        </p>
+  </section>
+
+  <section class="project-tools">
+    <h2>Tools Used</h2>
+    <ul>
+      <li>ibisPaint X</li>
+    </ul>
+  </section>
+</ProjectLayout>
+
+<DustParticle />
