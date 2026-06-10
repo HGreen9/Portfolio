@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/baseLayout.astro';
 import Sidebar from '../components/sidebar.astro';
+import Gallerybanner from '../components/novels&comics/gallerybanner.astro';
+import Gallerycards from '../components/novels&comics/gallerycards.astro';
 import Backtotop from '../components/backtotop.astro';
 import DustParticle from '../components/dustParticle.astro';
 ---
@@ -17,15 +19,15 @@ import DustParticle from '../components/dustParticle.astro';
 		<button data-filter="all">Show All</button>
 		<button data-filter="Novellas">Novellas</button>
 		<button data-filter="Novels">Novels</button>
-		<button data-filter="Web Comics">Web Comics</button>
+		<button data-filter="WebComics">Web Comics</button>
 	</div>
 
 	<section class="gallery-banner">
-		
+		<Gallerybanner />
 	</section>
 
 	<div class="gallery">
-	
+		<Gallerycards />
 	</div>
   
 	<Backtotop />
